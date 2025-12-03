@@ -1,3 +1,8 @@
+# Pseudoterminal bridge
+
+Use for monitoring and debugging serial port systems or RS485 bus etc.
+
+## Help
 ```
 Pseudoterminal bridge
 Bridges data between pseudoterminals (ptys) and a physical serial port.
