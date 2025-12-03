@@ -19,3 +19,39 @@ Create 4 bridged ptys without real serial port:
 
 Note: created ptys are symlinked to /dev/ttyPTYBR* if the program is run as root.
 ```
+
+# Example
+**Terminal 1**
+```sh
+user:~/pty-bridge$ sudo ./pty-bridge -v 3 -d /dev/ttyUSB0 
+serial port /dev/ttyUSB0 at 9600 baud
+pty: /dev/ttyPTYBR0 -> /dev/pts/10
+pty: /dev/ttyPTYBR1 -> /dev/pts/11
+pty: /dev/ttyPTYBR2 -> /dev/pts/12
+```
+
+**Terminal 2**
+```sh
+user:~$ echo "Hello!" > /dev/ttyPTYBR0
+```
+
+**Terminal 3**
+```sh
+Welcome to minicom 2.9
+
+OPTIONS: I18n 
+Port /dev/ttyPTYBR1, 16:47:19
+
+Press CTRL-A Z for help on special keys
+
+Hello!
+```
+
+**Terminal 4**
+```sh
+screen /dev/ttyPTYBR2 115200
+
+...
+
+Hello!
+```
