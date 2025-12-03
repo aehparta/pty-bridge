@@ -7,7 +7,8 @@ Options:
   -v, --ptys=VALUE            count of ptys to create
                               (default: 2)
   -d, --device=VALUE          serial port device
-  -b, --baudrate=VALUE        serial port baudrate, accepts: 1200, 2400, 9600, 19200, 38400, 57600, 115200
+  -b, --baudrate=VALUE        serial port baudrate, accepts: 1200, 2400,
+                              9600, 19200, 38400, 57600, 115200
                               (default: 9600)
 
 Create 3 ptys bridged with /dev/ttyUSB0:
