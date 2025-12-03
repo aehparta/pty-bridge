@@ -11,8 +11,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <pty.h>
-#include "../common/opt.h"
-#include "../common/uart.h"
+#include "opt.h"
+#include "uart.h"
 
 
 #define MAX_PTY_COUNT 32
