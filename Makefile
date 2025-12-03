@@ -1,4 +1,5 @@
 
+BINARY = pty-bridge
 SRCS = main.c opt.c uart.c
 OBJS = $(SRCS:.c=.o)
 CC = gcc
@@ -7,8 +8,8 @@ LDFLAGS = -lutil
 
 
 all:
-	$(CC) $(CFLAGS) $(LDFLAGS) $(SRCS) -o bridge
+	$(CC) $(CFLAGS) $(LDFLAGS) $(SRCS) -o $(BINARY)
 clean:
-	rm -f bridge
+	rm -f $(BINARY)
 
 PHONY: all clean
